@@ -176,7 +176,8 @@ function checkAuthenticate()
 
 //* 10.
 
- // save your time, by what json we need when failed
+ //! save your time, by what json we need when failed
+ //* add certain messages when call it if you want
  function printFailure($message = "none"){
     echo json_encode(array("status" => "failure", "message" => $message));
 }

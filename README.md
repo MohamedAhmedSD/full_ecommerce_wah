@@ -27,3 +27,9 @@
 ## [29] Create php start files and test connection:-
 - stop auth method 
 - text connection files with your DB
+
+## [30] Signup [backend]:-
+- create signup php file and test it
+- ensure we use unique email address and phone number in both database and php
+
+

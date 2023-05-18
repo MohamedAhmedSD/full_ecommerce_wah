@@ -22,3 +22,8 @@
 - notification
 - payment methods with E wallet
 - web admin in order to control the application(responsive)
+
+
+## [29] Create php start files and test connection:-
+- stop auth method 
+- text connection files with your DB

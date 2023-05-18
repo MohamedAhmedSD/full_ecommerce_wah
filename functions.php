@@ -157,24 +157,24 @@ function deleteFile($dir, $imagename)
 
 //* 9.
 
-function checkAuthenticate()
-{
-    if (isset($_SERVER['PHP_AUTH_USER'])  && isset($_SERVER['PHP_AUTH_PW'])) {
-        if ($_SERVER['PHP_AUTH_USER'] != "wael" ||  $_SERVER['PHP_AUTH_PW'] != "wael12345") {
-            header('WWW-Authenticate: Basic realm="My Realm"');
-            header('HTTP/1.0 401 Unauthorized');
-            echo 'Page Not Found';
-            exit;
-        }
-    } else {
-        exit;
-    }
+// function checkAuthenticate()
+// {
+//     if (isset($_SERVER['PHP_AUTH_USER'])  && isset($_SERVER['PHP_AUTH_PW'])) {
+//         if ($_SERVER['PHP_AUTH_USER'] != "wael" ||  $_SERVER['PHP_AUTH_PW'] != "wael12345") {
+//             header('WWW-Authenticate: Basic realm="My Realm"');
+//             header('HTTP/1.0 401 Unauthorized');
+//             echo 'Page Not Found';
+//             exit;
+//         }
+//     } else {
+//         exit;
+//     }
 
-    // End 
+//     // End 
    
-}
+// }
 
-//* 10.
+//* 10. printFailure
 
  //! save your time, by what json we need when failed
  //* add certain messages when call it if you want
@@ -183,17 +183,18 @@ function checkAuthenticate()
 }
 
 
-//* 11.
+//* 11. send email
 
-// send email
-// what we need to do it, by using => mail() function
-// title == subject, body == message
-// we use fixed header
+//? what we need to do it, by using => mail() function
+//* title == subject, body == message
+//* we use fixed header
 function sendEmail($to , $title , $body){
     // $header = "From: support@waelabohamza.com " . "\n" . "CC: waeleagle1243@gmail.com" ; 
     // CC == send copy to admin frpm email that send into user
-    $header = "From: support@sheikhalarab.com " . "\n" . "CC: sheikhalarabelrayah@gmail.com" ; 
+    // $header = "From: support@sheikhalarab.com " . "\n" . "CC: sheikhalarabelrayah@gmail.com" ; 
+    $header = "From: sheikhalarabelrayah@gmail.com " . "\n" . "CC: sheikhalarabelrayah@gmail.com" ; 
     mail($to , $title , $body , $header) ; 
-    // after end check
+    
+    //* after end check
     echo "Success" ; 
     }

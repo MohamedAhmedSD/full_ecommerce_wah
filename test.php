@@ -1,6 +1,6 @@
 <?php 
 
-include './connect.php';
+include 'connect.php';
 
 //! we use insert method which need 2 parameters
 //* table && data 
@@ -14,8 +14,8 @@ $table = "users";
 //? avoid writing error by copy columns name and paste them here 
 $data = array( 
 "users_name" => "wael",
-"users_email" => "wael@gmail.com",
-"users_phone" => "324234",
+"users_email" => "wael2@gmail.com",
+"users_phone" => "3242345",
 "users_verifycode" => "3243243",       
 );
 

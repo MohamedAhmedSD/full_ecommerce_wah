@@ -1,5 +1,7 @@
 <?php
-//* I change dsn ... dbname to that I use it
+//* I change dsn ...
+//! 1. dbname to that I use it
+//! 2. hostname
 //? test them by create => test.php
 
 //! [1] local database
@@ -9,12 +11,12 @@ $pass = "";
 
 
 //! [2] use hosting
-// $dsn = "mysql:host=localhost;dbname=epiz_34011609_ecommerce_new";
-// // I am on locak so no user or pw
-// // test them by create => test.php
+// $dsn = "mysql:host=localhost;dbname=epiz_34011609_ecommerce_project";
+// I am on locak so no user or pw
+// test them by create => test.php
+// $dsn = "mysql:host=sql204.epizy.com;dbname=epiz_34011609_ecommerce_project";
 // $user = "epiz_34011609";
 // $pass = "XbBALRBrQDOI";
-
 $option = array(
    PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES UTF8"
 );
@@ -29,6 +31,7 @@ try {
 
    //* import functions file
    include "functions.php";
+   // include "./functions.php";
 
    if (!isset($notAuth)) {
       //* stop check authentication

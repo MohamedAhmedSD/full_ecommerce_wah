@@ -11,7 +11,8 @@ $username = filterRequest("username");
 $password = filterRequest("password");
 $email = filterRequest("email");
 $phone = filterRequest("phone");
-$verfyCode = "0";
+//* make it randomn from 5 digits
+$verifycode = rand(10000, 99999);
 //? ==========================================================
 
 //* connect to our DB
@@ -44,16 +45,25 @@ if($count > 0){
         "users_password" => $password,
         "users_email" => $email,
         "users_phone" => $phone,
-        "users_verifycode" => "0",
+        "users_verifycode" => $verifycode,
         //? we use => "0" not 0
     );
+    
+    //* we need send verifycode to user email
+    sendEmail($email,"Verify Code Ecommerce","Verify Code $verifycode");
     //* call insert method
     insertData("users",$data);
 
     //* test them through thunder
+
+    //? ==========================================================
+    //* when we use local host :-
+    //* mail() not send
+
+    //* on thunder test => don't enter verifycode == we get it random
+
 }
 
-//? ==========================================================
 
 
 
